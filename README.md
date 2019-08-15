@@ -1,37 +1,62 @@
-## Welcome to GitHub Pages
+# ModernRenai [![Install with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://rauenzi.github.io/ModernRenai/ModernRenai.user.css)
+A UserCSS theme for the Katawa Shoujo forums on the Ren'Ai.
 
-You can use the [editor on GitHub](https://github.com/rauenzi/ModernRenai/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Installation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Get Stylus
+First install the Stylus extension for your browser:
 
-### Markdown
+1. [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+2. [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/)
+3. [Opera](https://addons.opera.com/extensions/details/stylus/) (see [wiki](https://github.com/openstyles/stylus/wiki/Opera,-Outdated-Stylus) for more recent version)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Get Theme
 
-```markdown
-Syntax highlighted code block
+Click the badge at the top of this README or click here: [https://rauenzi.github.io/ModernRenai/ModernRenai.user.css](https://rauenzi.github.io/ModernRenai/ModernRenai.user.css)
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+## Options
 
-1. Numbered
-2. List
+## Color Scheme
 
-**Bold** and _Italic_ and `Code` text
+There are two options for color schemes in this theme.
+ - `Classic` - this will remind you of how the forums used to look.
+ - `Modern` - this is a more modern take on the original forums using more light colors and sharp edges.
 
-[Link](url) and ![Image](src)
-```
+Default: `Classic`
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Classic
 
-### Jekyll Themes
+![Classic Scheme](screenshots/classic.png)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rauenzi/ModernRenai/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Modern
 
-### Support or Contact
+![Modern Scheme](screenshots/modern.png)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Accent Color
+
+This is the main color throughout the forums. Back in the original forum this was a nice red color. You can change this to whatever you like and it will work in both Classic and Modern schemes.
+
+Default: `#993333`
+
+### Classic w/ Green
+
+![Accented Classic Scheme](screenshots/accent_classic.png)
+
+### Modern w/ Green
+
+![Accented Modern Scheme](screenshots/accent_modern.png)
+
+## Screen Width
+
+This adjusts the width of the forum relative to the maximum possible width of the forum (`1300px`). Adjustable to allow for different reading preferences.
+
+Default: `65%`
+
+### Classic Full-Width
+
+![Wide Classic Scheme](screenshots/wide_classic.png)
+
+### Modern Full-Width
+
+![Wide Modern Scheme](screenshots/wide_modern.png)

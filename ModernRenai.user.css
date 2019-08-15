@@ -1,0 +1,409 @@
+/* ==UserStyle==
+@name           Modern Renai
+@namespace      ks.renai.us
+@version        0.0.3
+@description    Fixes the new board to look like the classic renai with an optional modern take.
+@author         Zack Rauen <rauenzi@outlook.com> (https://ZackRauen.com/)
+@license		MIT
+
+@var color accent-color 'Accent color' #993333
+@var select schema "Color Scheme" ["Classic", "Modern"]
+@var range page-width "Width" [65, 50, 100, 1, "%"]
+
+@preprocessor   stylus
+==/UserStyle== */
+
+@-moz-document domain("ks.renai.us") {
+    
+    page-bg = url("https://i.imgur.com/AFRrWpL.png") #fddc99;
+    logo = url("https://i.imgur.com/lpD2MWk.png");
+    row-primary = #f3e7cb;
+    row-secondary = #f3ebd9;
+    row-hover = #ffe5ae;
+    forum-ul-bg = #f9e9c4;
+    card-bg = url("https://i.imgur.com/LkyLwaz.png") #fcf0d3;
+    card-border = 2px solid #716b5e;
+    card-radius = 6px;
+    post-bg = auto;
+    dropdown-bg =#F9E9C4;
+    panel-bg = #fcf0d3;
+    inner-panel-bd = #f3e7cb;
+    tab-bg = #efdbb1;
+    tab-active-bg = #fcf0d2;
+    
+    if schema == "Modern" {
+        page-bg = url(https://i.imgur.com/eKuHINX.png) 50% 0 no-repeat fixed accent-color;
+        logo = url("https://i.imgur.com/SkXErH4.png;")
+        row-primary = #f7f7f7;
+        row-secondary = #f2f2f2;
+        row-hover = #E5E7E6;
+        forum-ul-bg = #f9f9f9;
+        card-bg = white;
+        card-border = 2px solid accent-color;
+        card-radius = 0;
+        post-bg = white;
+        dropdown-bg =white;
+        panel-bg = white;
+        inner-panel-bd = #f7f7f7;
+        tab-bg = #CFCFCF;
+        tab-active-bg = #F9F9F9;
+    }
+    
+    a:link	{ color: accent-color; text-decoration: none; }
+    a:visited	{ color: accent-color; text-decoration: none; }
+    a:hover	{ color: accent-color; text-decoration: underline!important; }
+    a:active	{ color: accent-color; text-decoration: none; }
+    
+    .postlink, .postlink:visited { color: accent-color; border: none!important; }
+    .postlink:hover	{ color: accent-color; background: none!important; }
+    .button:hover { text-decoration: none!important; border-color: accent-color; }
+    
+    h3, .content h2.faq-title {
+        border-bottom-color: #716b5e;
+        color: #444;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    
+    .button-secondary:focus, .button-secondary:hover, .button:focus .icon, .button:hover .icon {
+        color: accent-color;
+    }
+    
+    .button:focus,
+    input.button1:focus,
+    input.button2:focus {
+        color: accent-color;
+        border-color: accent-color;
+    }
+    
+    // * {
+    //     box-sizing: border-box;
+    // }
+
+    html, body {
+        background: page-bg;
+    }
+    
+    body {
+        color: #443322;
+        font-family: Verdana, Helvetica, Arial, sans-serif;
+        font-size: 10px;
+        margin: 0 auto;
+        padding: 12px 0;
+        min-height: 100%;
+        width: page-width;
+    }
+    
+    #wrap {
+        border: none;
+        padding: 0 20px;
+        min-width: 650px;
+        max-width: 1300px;
+    }
+    
+    #wrap, .headerbar, .navbar {
+        background: none;
+    }
+    
+    #page-header, .forabg, #page-footer .navbar, .forumbg {
+        background: card-bg;
+        border: card-border;
+        -moz-border-radius: card-radius;
+        -webkit-border-radius: card-radius;
+        border-radius: card-radius;
+    }
+    
+    #logo, .site_logo {
+        width: 426px;
+        height: 70px;
+    }
+    
+    .site_logo {
+        background-image: logo;
+    }
+    
+    #site-description > h1, #site-description > p { display: none; }
+    
+    .search-header {
+        box-shadow: none;
+    }
+    
+    .search-header fieldset {
+        border: 1px solid #C7C3BF;
+        border-radius: 4px;
+    }
+    
+    .search-box .button {
+        
+    }
+    
+    #nav-main, #nav-breadcrumbs {
+        border-top: 1px solid #716b5e;
+    }
+    
+    .forabg .header a:link	{ color: accent-color; text-decoration: none; }
+    .forabg .header a:visited	{ color: accent-color; text-decoration: none; }
+    .forabg .header a:hover	{ color: accent-color; text-decoration: underline; }
+    .forabg .header a:active	{ color: accent-color; text-decoration: none; }
+    
+    li.header dt, li.header dd {
+        color: #716b5e;
+        font-family: Verdana, Helvetica, Arial, sans-serif;
+    }
+    
+    ul.forums {
+        border-bottom: 1px solid #716b5e;
+        background: forum-ul-bg;
+    }
+    
+    ul.topiclist li {
+        color: #443322;
+    }
+
+    li.row {
+        border-top: 1px solid #716b5e;
+        border-bottom: 1px solid transparent;
+    }
+    
+    .dropdown-extended ul li:hover,
+    li.row:hover {
+        background-color: row-hover;
+    }
+    
+    ul.topiclist dd, li.row:hover dd {
+        border-left-color: #ada69d;
+    }
+    
+    .bg1 {
+        background-color: row-primary;
+    }
+
+    .bg2 {
+        background-color: row-secondary;
+    }
+    
+    .post {
+        padding: 0 10px;
+        margin-bottom: 4px;
+        background: post-bg;
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        border: card-border;
+        -moz-border-radius: card-radius;
+        -webkit-border-radius: card-radius;
+        border-radius: card-radius;
+        padding-top: 5px;
+    }
+    
+    .postprofile {
+        color: #716b5e;
+        border-left-color: #716b5e;
+    }
+    
+    .signature {
+        border-top-color: #716b5e;
+    }
+    
+    .pagination li a:hover,
+    .pagination li a:hover .icon,
+    .pagination li.active span,
+    .pagination .dropdown-visible a.dropdown-trigger,
+    .nojs .pagination .dropdown-container:hover a.dropdown-trigger {
+        background: accent-color;
+        border-color: accent-color;
+    }
+    
+    .pagination li.arrow a,
+    .pagination li.arrow a i,
+    .pagination li.page-jump a,
+    .pagination li.page-jump a i,
+    .pagination li a,
+    .pagination li.active span {
+        font-size: 0.9em;
+        margin: 0 1px!important;
+        padding: 0 2px;
+        border-radius: 0!important;
+    }
+    
+    .pagination span i { font-size: 1em; }
+    .pagination li.arrow a { padding: 0; }    
+    .pagination li.page-jump { margin: 0; }
+    
+    .pagination li a {
+        color: #665544;
+        background-color: #ECEAE8;
+        border-color: #B4B2B0;
+        text-decoration: none!important;
+    }
+    
+    .button-search:hover, .button-search-end:hover {
+        border-color: #C7C3BF!important;
+    }
+    
+    blockquote { background-color: #EBEBEB; }
+    
+    .dropdown {
+        filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));   
+    }
+    .dropdown .pointer { 
+        border-color: #716b5e transparent;
+        padding: 1px 2px;
+    }
+    .jumpbox .dropdown .pointer-inner,
+    .dropdown .pointer-inner {
+        border-color: dropdown-bg transparent;
+        left: -8px;
+    }
+    
+    .dropdown .dropdown-contents {
+        background: dropdown-bg;
+        border: 2px #716b5e solid;
+    }
+    
+    .jumpbox .dropdown li,
+    .dropdown li, .dropdown li.separator {
+        border-top: 1px solid #ada69d;
+    }
+    
+    #notification_list .pointer-inner {
+        border-color: accent-color transparent;
+    }
+    
+    .dropdown-extended .header {
+        background: accent-color;
+        text-shadow: none;
+        color: white;
+        border: none;
+        border-radius: 0;
+    }
+    
+    .header_settings a, .header_settings a:visited {
+        color: white;   
+    }
+    
+    .dropdown-extended ul li {
+        border-top: 1px solid #ada69d;
+        background-color: #F9E9C4;
+    }        
+    
+    .dropdown-extended a.mark_read {
+        border-color: #C7C3BF;
+        background-color: #E9E9E9;
+        background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #E9E9E9 100%);
+        background-image: linear-gradient(to bottom, #FFFFFF 0%,#E9E9E9 100%);
+        box-shadow: 0 0 0 1px #FFFFFF inset;
+        -webkit-box-shadow: 0 0 0 1px #FFFFFF inset;
+    }
+    
+    .panel {
+	    background-color: panel-bg;
+        color: #443322;
+        border: 2px #716b5e solid;
+    }
+    
+    .jumpbox-cat-link:link,
+    .jumpbox-cat-link:visited {
+        background: accent-color; 
+        color: white;
+    }
+    
+    .jumpbox-sub-link:link,
+    .jumpbox-sub-link:visited {
+        background: transparent;
+    }
+    
+    .jumpbox-sub-link:hover {
+        background: accent-color;
+        color: white;
+        text-decoration: none!important;
+    }
+    
+/*     .dropdown-contents a:link,
+    .dropdown-contents a:visited {
+        background: transparent;
+    }
+    
+    .dropdown-contents a:hover {
+        background: accent-color;
+        color: white;
+        text-decoration: none!important;
+    } */
+
+    
+    
+    /* START UCP */
+    #tabs a {
+        border: 1px solid #716b5e;
+        border-bottom: 0;
+        background-color: tab-bg;
+        padding: 6px 10px 6px 5px;
+        color: #828282;
+    }
+
+    #tabs a:hover {
+        color: #FFFFFF;
+        background: accent-color;
+        text-decoration: none!important;
+    }
+
+    #tabs .activetab a {
+        background: tab-active-bg;
+        padding-bottom: 7px;
+        color: #333333;
+    }
+
+    #tabs .activetab a:hover {
+        color: #000000;
+    }
+
+
+    /* Link styles for the sub-section links */
+    #navigation a {
+        color: accent-color;
+        background: #cfcfcf;
+        margin-right: -1px;
+        border: 1px solid #716b5e;
+    }
+
+    #navigation a:hover {
+        background-color: #DDDDDD;
+        color: accent-color;
+        border: 1px solid #716b5e;
+    }
+
+    #navigation #active-subsection a {
+        color: accent-color;
+        background-color: #F9F9F9;
+        background-image: none;
+    }
+
+    #navigation #active-subsection a:hover {
+        background-color: #F9F9F9;
+        color: accent-color;
+    }
+    
+    #cp-main .panel {
+        background-color: inner-panel-bg;
+    }
+    
+    #cp-main .pm {
+        background-color: #f3e7cb;
+        border: 2px #716b5e solid;
+    }
+    
+    .cp-mini {
+        background: none;
+        border: 2px #716b5e solid;
+    }
+    
+    .cp-mini dt {
+        margin-bottom: 5px;
+    }
+    
+    label,
+    fieldset dl:hover dt label,
+    fieldset.fields2 dl:hover dt label {
+        color: #000;
+    }
+
+}
