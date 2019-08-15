@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Modern Renai
 @namespace      ks.renai.us
-@version        0.0.3
+@version        0.0.4
 @description    Fixes the new board to look like the classic renai with an optional modern take.
 @author         Zack Rauen <rauenzi@outlook.com> (https://ZackRauen.com/)
 @license		MIT
@@ -15,13 +15,13 @@
 
 @-moz-document domain("ks.renai.us") {
     
-    page-bg = url("https://i.imgur.com/AFRrWpL.png") #fddc99;
-    logo = url("https://i.imgur.com/lpD2MWk.png");
+    page-bg = url("https://rauenzi.github.io/ModernRenai/images/classic_bg.png") #fddc99;
+    logo = url("https://rauenzi.github.io/ModernRenai/images/logo.png");
     row-primary = #f3e7cb;
     row-secondary = #f3ebd9;
     row-hover = #ffe5ae;
     forum-ul-bg = #f9e9c4;
-    card-bg = url("https://i.imgur.com/LkyLwaz.png") #fcf0d3;
+    card-bg = url("https://rauenzi.github.io/ModernRenai/images/classic_header.png") #fcf0d3;
     card-border = 2px solid #716b5e;
     card-radius = 6px;
     post-bg = auto;
@@ -32,8 +32,8 @@
     tab-active-bg = #fcf0d2;
     
     if schema == "Modern" {
-        page-bg = url(https://i.imgur.com/eKuHINX.png) 50% 0 no-repeat fixed accent-color;
-        logo = url("https://i.imgur.com/SkXErH4.png;")
+        page-bg = url("https://rauenzi.github.io/ModernRenai/images/modern_bg.png") 50% 0 no-repeat fixed accent-color;
+        logo = url("https://rauenzi.github.io/ModernRenai/images/logo_transparent.png");
         row-primary = #f7f7f7;
         row-secondary = #f2f2f2;
         row-hover = #E5E7E6;

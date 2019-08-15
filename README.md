@@ -3,16 +3,22 @@ A UserCSS theme for the Katawa Shoujo forums on the Ren'Ai.
 
 ## Installation
 
-### Get Stylus
+### 1. Get Stylus
 First install the Stylus extension for your browser:
 
 1. [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 2. [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/)
 3. [Opera](https://addons.opera.com/extensions/details/stylus/) (see [wiki](https://github.com/openstyles/stylus/wiki/Opera,-Outdated-Stylus) for more recent version)
 
-### Get Theme
+### 2. Get Theme
 
 Click the badge at the top of this README or click here: [https://rauenzi.github.io/ModernRenai/ModernRenai.user.css](https://rauenzi.github.io/ModernRenai/ModernRenai.user.css)
+
+### 3. Configure
+
+Configure to your liking with the options below and you're ready to go! To get to the config screen, click the Stylus icon in your browser, then select the cog icon next to the theme.
+
+![Configuration](screenshots/config.png)
 
 
 ## Options
