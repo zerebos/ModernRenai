@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Modern Renai
 @namespace      ks.renai.us
-@version        0.0.4
+@version        0.0.5
 @description    Fixes the new board to look like the classic renai with an optional modern take.
 @author         Zack Rauen <rauenzi@outlook.com> (https://ZackRauen.com/)
 @license		MIT
@@ -16,6 +16,7 @@
 @-moz-document domain("ks.renai.us") {
     
     page-bg = url("https://rauenzi.github.io/ModernRenai/images/classic_bg.png") #fddc99;
+    page-bg-size = initial;
     logo = url("https://rauenzi.github.io/ModernRenai/images/logo.png");
     row-primary = #f3e7cb;
     row-secondary = #f3ebd9;
@@ -33,6 +34,7 @@
     
     if schema == "Modern" {
         page-bg = url("https://rauenzi.github.io/ModernRenai/images/modern_bg.png") 50% 0 no-repeat fixed accent-color;
+        page-bg-size = cover;
         logo = url("https://rauenzi.github.io/ModernRenai/images/logo_transparent.png");
         row-primary = #f7f7f7;
         row-secondary = #f2f2f2;
@@ -82,6 +84,7 @@
 
     html, body {
         background: page-bg;
+        background-size: page-bg-size;
     }
     
     body {

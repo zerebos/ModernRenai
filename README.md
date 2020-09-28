@@ -1,5 +1,5 @@
 # ModernRenai [![Install with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://rauenzi.github.io/ModernRenai/ModernRenai.user.css)
-A UserCSS theme for the Katawa Shoujo forums on the Ren'Ai.
+A UserCSS theme for the Katawa Shoujo forums on the Ren'Ai. Check down below for some previews!
 
 ## Installation
 
